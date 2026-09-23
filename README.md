@@ -1,59 +1,28 @@
-# Phinerd landing page
+# QR Code Generator
 
-A single-page site for Phinerd — a mentor-led, cohort-based internship platform
-that hyper-curates candidates for early-stage Indian startups. Built to attract
-initial hiring customers and investors.
+A simple, single-page QR code generator — type any text or URL, customize the size and color, and download the result as a PNG. No backend, no build step, no dependencies to install.
 
-## Files
+**Live demo:** `https://<your-username>.github.io/<repo-name>/` (update after deploying)
 
-- `index.html` — page structure and copy
-- `styles.css` — all styling (design tokens at the top of the file)
-- `script.js` — mobile nav, the shortlist card interaction, scroll reveals, and the contact form
-- No build step, no dependencies. Just static files.
+## Features
+- Instant QR code generation from text or URLs
+- Adjustable size (small / medium / large)
+- Custom QR color
+- One-click PNG download
+- Works fully offline after first load (only one external script)
 
-## Publish it on GitHub Pages (free)
+## Tech
+- Plain HTML, CSS, and JavaScript
+- [qrcodejs](https://cdnjs.com/libraries/qrcodejs) loaded via CDN for QR rendering
 
-1. Create a new GitHub repository (e.g. `phinerd-site`).
-2. Upload `index.html`, `styles.css`, and `script.js` to the root of the repo
-   (drag-and-drop works on github.com, or `git push` if you're using the CLI).
-3. In the repo, go to **Settings → Pages**.
-4. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-5. Under **Branch**, choose `main` and folder `/ (root)`, then **Save**.
-6. GitHub will give you a URL like `https://yourusername.github.io/phinerd-site/`
-   within a minute or two. That's your live site.
-7. Optional: add a custom domain (e.g. `phinerd.com`) under the same Pages
-   settings once you own one — GitHub will walk you through the DNS records.
+## Running locally
+Just open `index.html` in any browser — no server or build tools needed.
 
-## Before you launch, edit these
+## Deploying to GitHub Pages
+1. Push this repo to GitHub.
+2. Go to **Settings → Pages**.
+3. Under **Source**, select the `main` branch and `/root` folder.
+4. Save. Your site will be live at `https://<your-username>.github.io/<repo-name>/` within a minute or two.
 
-- **Contact email** — in `script.js`, replace `hello@phinerd.com` with your real inbox.
-- **Founder note** — in `index.html`, search for "A note from the founder" and swap in your own name/quote.
-- **Form backend (optional but recommended)** — right now the contact form opens
-  the visitor's email client. To collect submissions directly into a dashboard
-  or spreadsheet instead:
-  1. Sign up free at [formspree.io](https://formspree.io) and create a form.
-  2. In `index.html`, add `action="https://formspree.io/f/YOUR_ID" method="POST"`
-     to the `<form id="contact-form">` tag.
-  3. In `script.js`, delete (or comment out) the block under `// --- Contact form ---`.
-- **Investor deck / candidate list links** — the "Request the deck" and role
-  routing currently go through the same contact form. Once you have a deck
-  link or Typeform, you can point those buttons directly at it.
-- **Real numbers** — this draft deliberately avoids inventing traction, user
-  counts, or funding figures. Add your actual metrics once you have them to
-  strengthen the investor section.
-
-## Design notes
-
-The visual identity is built around Phinerd's core differentiator — hand
-curation, not volume — using an "admissions dossier" motif: a stamped
-shortlist of candidate cards in the hero (click or hover to fan them out),
-ledger-style data blocks, and a stamp-red / mustard / forest accent palette
-against ink navy and warm paper. Fonts: Fraunces (display), Inter (body),
-IBM Plex Mono (labels and data).
-
-The page now speaks to three audiences, each with its own section and nav
-anchor: **startups** (`#startups`, hiring), **students** (`#students`, apply
-to join a mentor-led cohort directly — not just get sourced by a startup),
-and **investors** (`#investors`). The student section uses the forest-green
-accent to visually separate it from the other two, and the contact form's
-"I am a..." dropdown routes all three into one form.
+## License
+MIT — free to use, modify, and share.
